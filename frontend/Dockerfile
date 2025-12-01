@@ -21,6 +21,9 @@ COPY --from=deps /app/node_modules ./node_modules
 # Copy source files
 COPY . .
 
+# Ensure public directory exists (may be empty)
+RUN mkdir -p public
+
 # Set environment variables for build
 ENV NEXT_TELEMETRY_DISABLED=1
 ENV NODE_ENV=production
