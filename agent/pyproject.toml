@@ -1,0 +1,16 @@
+[project]
+name = "shams"
+version = "0.1.0"
+description = "Shams - Your bright AI voice companion that brings warmth to your conversations"
+requires-python = ">=3.9"
+dependencies = [
+    "livekit-agents[google,silero]~=1.0",
+    "python-dotenv",
+]
+
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools.packages.find]
+where = ["src"]

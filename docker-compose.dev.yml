@@ -1,0 +1,31 @@
+version: '3.8'
+
+# Development overrides - use with:
+# docker-compose -f docker-compose.yml -f docker-compose.dev.yml up --build
+
+services:
+  # Agent with dev mode and volume mounts for hot reload
+  agent:
+    build:
+      context: ./agent
+      dockerfile: Dockerfile
+    command: ["python", "src/agent.py", "dev"]
+    volumes:
+      - ./agent/src:/app/src:ro
+    environment:
+      - PYTHONDONTWRITEBYTECODE=1
+
+  # Frontend with direct port access (no Nginx)
+  frontend:
+    build:
+      context: ./frontend
+      dockerfile: Dockerfile
+    ports:
+      - "3000:3000"
+    environment:
+      - NODE_ENV=development
+
+  # Disable Nginx in development
+  nginx:
+    profiles:
+      - production-only
