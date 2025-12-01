@@ -2,7 +2,7 @@ import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
   title: 'Shams - Your Bright AI Companion',
-  description: 'Shams brings warmth and brightness to your conversations. Your cheerful AI voice companion. شمس',
+  description: 'Shams brings warmth and brightness to your conversations. Your cheerful AI voice companion.',
 };
 
 export default function RootLayout({

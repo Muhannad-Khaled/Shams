@@ -85,7 +85,7 @@ export default function Home() {
     <main className="main-container">
       <div className="content">
         <h1 className="title">Shams</h1>
-        <p className="subtitle">Your bright AI companion | شمس</p>
+        <p className="subtitle">Your bright AI companion</p>
 
         {error && (
           <div className="error-message">

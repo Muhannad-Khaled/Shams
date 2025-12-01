@@ -1,5 +1,7 @@
 # Shams - Real-time Voice Agent
 
+**Live Demo:** [shams.up.railway.app](https://shams.up.railway.app)
+
 **Shams** (شمس - meaning "Sun" in Arabic) brings warmth and brightness to your conversations! Built with LiveKit Agents framework and Google's Gemini Live API, Shams is your cheerful AI voice companion that speaks in Egyptian Arabic dialect.
 
 ![Shams Voice Agent](assets/screenshot.png)
